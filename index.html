@@ -113,6 +113,49 @@
 
   <footer class="site-footer" id="contato"><div class="container footer-content"><div class="footer-about"><img src="assets/vertexone-logo.webp" alt="VertexOne Technologies" width="240" height="80"><p>Soluções corporativas e atendimento digital em uma única experiência.</p></div><div><h3>Serviços</h3><a href="#servicos">Infraestrutura</a><a href="#servicos">Redes</a><a href="#suporte">Suporte técnico</a></div><div><h3>Ajuda</h3><a href="#atendimento">Abrir chamado</a><a href="#conhecimento">Base de conhecimento</a><a href="#atendimento">Canais de atendimento</a></div><div><h3>VertexOne</h3><a href="#empresa">Sobre a empresa</a><a href="#contato">Contato</a><a href="#topo">Voltar ao topo</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> VertexOne Technologies</span><span>Segurança • Confiabilidade • Atendimento</span></div></footer>
   <script src="script.js" defer></script>
-  <!-- Integração: inserir aqui o snippet oficial do Amazon Connect após concluir Domain & security. Nunca inserir uma chave de assinatura JWT no repositório. -->
+  <!-- Widget oficial Amazon Connect. O segredo JWT nunca deve ser incluído neste arquivo. -->
+  <script type="text/javascript">
+    (function(w, d, x, id) {
+      var s = d.createElement('script');
+      s.src = 'https://edn-servicedesk-ti.my.connect.aws/connectwidget/static/amazon-connect-chat-interface-client.js';
+      s.async = true;
+      s.id = id;
+      d.getElementsByTagName('head')[0].appendChild(s);
+      w[x] = w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments); };
+    })(window, document, 'amazon_connect', 'ba8ef306-8e4e-4101-8b0c-6224fa8288ac');
+
+    amazon_connect('styles', {
+      iconType: 'CHAT_VOICE',
+      openChat: { color: '#ffffff', backgroundColor: '#123456' },
+      closeChat: { color: '#ffffff', backgroundColor: '#123456' }
+    });
+    amazon_connect('snippetId', 'QVFJREFIaDRobWZ4TDRrQys5SXJsU0RsT2NjaHpDOEQvN3ZqSEZkQWdhY1I3SUhoUXdHblh6ZXN2MEZRdUduWE82Ynd0TDFhQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNdzJkSmlJd1g4ZUl4aWRkR0FnRVFnQ3VxWXNoVjB2eUt0cGxiZm1tQlVCZGJ6R09KN1NzeVRrUmtER0hINUR2aWpZTFNJT2NVV0phcERJN086OmlLYjlDM1F4Vnp2bVZOWkZ5Qlk4RENkc1RZUFMzcUdRRmNRM2cxaUtIanJxSG1FSUxPUTU5QWd1c0lRK3ZiU1pTZENCSnFVYVJ3RmF0ZjRtSlQrREFNekdhWE51b3hwNHE2VGFRTVZuUExKek9NME11bkNIS0VYcjUwakxtb2ZkRG13bk1Kb2lra1VzOGJPczdjMDlWQ0NTNVZpdG9QYz0=');
+    amazon_connect('supportedMessagingContentTypes', [
+      'text/plain',
+      'text/markdown',
+      'application/vnd.amazonaws.connect.message.interactive',
+      'application/vnd.amazonaws.connect.message.interactive.response'
+    ]);
+
+    // Botões existentes também abrem o widget, preservando o layout da VertexOne.
+    amazon_connect('customLaunchBehavior', {
+      programmaticLaunch: function(launchCallback) {
+        var elements = document.querySelectorAll(
+          '.header-cta, .hero-actions .btn-primary, ' +
+          '.services-grid .service-card:first-child, ' +
+          '.mobile-nav a[href="#atendimento"], ' +
+          '.knowledge .text-link, .company-inner a[href="#atendimento"]'
+        );
+        elements.forEach(function(element) {
+          element.addEventListener('click', function(event) {
+            event.preventDefault();
+            launchCallback();
+          });
+        });
+      }
+    });
+    // PENDENTE: adicionar amazon_connect('authenticate', callback) depois que
+    // um servidor confiável emitir tokens JWT HS256; GitHub Pages não o faz.
+  </script>
 </body>
 </html>
