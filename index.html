@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121c29">
+  <meta name="description" content="VertexOne Technologies — suporte para soluções, conectividade, equipamentos e serviços corporativos em um só lugar.">
+  <title>Central de Suporte | VertexOne Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#principal">Ir para o conteúdo</a>
+  <header class="site-header" id="topo">
+    <div class="container header-main">
+      <a href="#topo" class="brand" aria-label="VertexOne Technologies, início">
+        <img src="assets/vertexone-logo.webp" alt="VertexOne Technologies" width="240" height="80">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#solucoes">Produtos</a>
+        <a href="#servicos">Soluções</a>
+        <a href="#servicos">Serviços</a>
+        <a class="active" href="#suporte">Suporte</a>
+        <a href="#empresa">Empresa</a>
+      </nav>
+      <a class="header-cta" href="#atendimento"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 0 1 16 0M4 10v5a2 2 0 0 0 2 2h2v-7H6a2 2 0 0 0-2 2m16-2v5a2 2 0 0 1-2 2h-2v-7h2a2 2 0 0 1 2 2M16 19h-4"/></svg> Falar com suporte</a>
+      <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" hidden>
+      <a href="#solucoes">Produtos</a><a href="#servicos">Soluções</a><a href="#servicos">Serviços</a><a href="#suporte">Suporte</a><a href="#empresa">Empresa</a><a href="#atendimento">Falar com suporte</a>
+    </nav>
+  </header>
+  <main id="principal">
+    <section class="hero" aria-label="Central de suporte VertexOne">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide is-active" style="background-image:url('assets/slide-01-datacenter.webp')"></div>
+        <div class="hero-slide" style="background-image:url('assets/slide-02-corporativo.webp')"></div>
+        <div class="hero-slide" style="background-image:url('assets/slide-03-atendimento.webp')"></div>
+      </div>
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="eyebrow"><span class="tiny-line"></span> PORTAL DE SUPORTE CORPORATIVO</span>
+          <h1>Suporte que mantém sua empresa <span>em movimento.</span></h1>
+          <p>Acesse serviços, abra chamados e encontre soluções para as necessidades da sua operação. Tudo em uma central de atendimento.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#atendimento">Abrir um chamado <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost" href="#servicos">Conhecer serviços <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-wrap container" id="busca" aria-label="Localizar ajuda">
+      <div class="search-intro">
+        <span class="search-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></span>
+        <div><h2>Encontre o que precisa</h2><p>Pesquise por acesso, rede, equipamentos ou serviços.</p></div>
+      </div>
+      <form class="search-form" id="support-search" role="search">
+        <label class="sr-only" for="support-query">Buscar um assunto de suporte</label>
+        <input id="support-query" type="search" name="busca" placeholder="Digite sua dúvida ou assunto de suporte" required autocomplete="off">
+        <button type="submit">Pesquisar <span aria-hidden="true">→</span></button>
+        <p class="search-feedback" id="search-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section section-short" id="suporte">
+      <div class="container">
+        <div class="section-heading"><div><span class="section-label">ACESSO RÁPIDO</span><h2>Como podemos ajudar?</h2></div><p>Escolha uma opção para encontrar orientações ou falar com nossa equipe.</p></div>
+        <div class="services-grid">
+          <a class="service-card" href="#atendimento"><span class="card-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 12h7M9 16h6"/></svg></span><h3>Abrir chamado</h3><p>Solicite assistência para problemas e necessidades técnicas.</p><span class="card-link">Solicitar atendimento <b aria-hidden="true">↗</b></span></a>
+          <a class="service-card" href="#conhecimento"><span class="card-icon purple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1zm0 0v15"/></svg></span><h3>Base de conhecimento</h3><p>Encontre respostas e orientações para as dúvidas mais comuns.</p><span class="card-link">Explorar artigos <b aria-hidden="true">↗</b></span></a>
+          <a class="service-card" href="#servicos"><span class="card-icon teal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 3-.6 2.1-2 .9-2-.8-2 3 1.5 1.6-.3 2-1.6 1.4 1.5 3.3 2.2-.4 1.8 1.3.2 2.2h3.8l.5-2.2 1.9-1.1 2.2.4 1.5-3.3-1.6-1.4-.2-2 1.5-1.6-2-3-2 .8-2-.9L13 3z"/><circle cx="11.6" cy="11.7" r="3"/></svg></span><h3>Serviços de TI</h3><p>Conheça os serviços disponíveis para sua operação.</p><span class="card-link">Ver serviços <b aria-hidden="true">↗</b></span></a>
+          <a class="service-card" href="#contato"><span class="card-icon amber"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3 8.6 8 11 5-2.4 8-6 8-11V5l-8-3z"/><path d="m8 12 2.7 2.7L16 9"/></svg></span><h3>Segurança e acesso</h3><p>Recuperação de conta e orientação sobre proteção de dados.</p><span class="card-link">Saiba mais <b aria-hidden="true">↗</b></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="servicos">
+      <div class="container">
+        <div class="section-heading"><div><span class="section-label">NOSSAS SOLUÇÕES</span><h2>Tecnologia para cada desafio.</h2></div><p>Infraestrutura, conectividade e suporte para o dia a dia das empresas.</p></div>
+        <div class="solutions-grid" id="solucoes">
+          <article class="solution-card"><img src="assets/infraestrutura-ti.webp" alt="Ambiente tecnológico com computadores e servidores" loading="lazy"><div><span>01 / INFRAESTRUTURA</span><h3>Infraestrutura corporativa</h3><p>Servidores, equipamentos e recursos preparados para o crescimento do negócio.</p></div></article>
+          <article class="solution-card"><img src="assets/slide-02-corporativo.webp" alt="Edifício moderno de ambiente corporativo" loading="lazy"><div><span>02 / CONECTIVIDADE</span><h3>Redes e conectividade</h3><p>Conexões estáveis, integração de ambientes e continuidade operacional.</p></div></article>
+          <article class="solution-card"><img src="assets/slide-03-atendimento.webp" alt="Atendimento profissional em ambiente empresarial" loading="lazy"><div><span>03 / ATENDIMENTO</span><h3>Suporte especializado</h3><p>Atendimento organizado para agilizar solicitações e resolver incidentes.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section knowledge" id="conhecimento">
+      <div class="container knowledge-grid">
+        <div class="knowledge-intro"><span class="section-label">AUTOATENDIMENTO</span><h2>Informação útil quando você precisa.</h2><p>Orientações rápidas para situações comuns da rotina de trabalho.</p><a href="#atendimento" class="text-link">Ainda precisa de ajuda? Fale com o suporte <span aria-hidden="true">↗</span></a></div>
+        <div class="faq-list">
+          <details id="dica-senha"><summary><span>01</span> Não consigo acessar minha conta corporativa <b aria-hidden="true">+</b></summary><p>Verifique seu e-mail cadastrado e informe à equipe o tipo de dificuldade encontrado. Nunca compartilhe sua senha nem códigos de autenticação.</p></details>
+          <details id="dica-rede"><summary><span>02</span> Estou sem internet ou com a rede lenta <b aria-hidden="true">+</b></summary><p>Confirme se o problema ocorre em um único dispositivo e se a conexão está ativa. Ao entrar em contato, descreva quando a falha começou e quais serviços foram afetados.</p></details>
+          <details id="dica-equipamento"><summary><span>03</span> Preciso solicitar um equipamento <b aria-hidden="true">+</b></summary><p>Informe o equipamento necessário, o setor solicitante e a finalidade de uso para facilitar a análise e o encaminhamento.</p></details>
+          <details id="dica-chamado"><summary><span>04</span> Como solicitar atendimento? <b aria-hidden="true">+</b></summary><p>Utilize a central de atendimento para descrever sua necessidade. A equipe responsável será acionada conforme a categoria da solicitação.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="atendimento">
+      <div class="container contact-grid">
+        <div class="contact-text"><span class="section-label">CENTRAL DE ATENDIMENTO</span><h2>Estamos aqui para ajudar sua operação a seguir em frente.</h2><p>Descreva o que precisa e escolha o canal mais conveniente. Nosso atendimento organiza cada solicitação e direciona para a área responsável.</p><div class="contact-options"><div><span class="bullet"></span><strong>Chat online</strong><small>Converse por mensagens</small></div><div><span class="bullet"></span><strong>Atendimento por voz</strong><small>Use o microfone do navegador</small></div></div></div>
+        <div class="contact-panel" id="widget-anchor"><span class="contact-panel-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 0 1 16 0M4 10v6a2 2 0 0 0 2 2h2v-8H6a2 2 0 0 0-2 2m16-2v6a2 2 0 0 1-2 2h-2v-8h2a2 2 0 0 1 2 2M10 20h4"/></svg></span><h3>Central VertexOne</h3><p>O atendimento digital é o ponto de contato para solicitações relacionadas a acesso, redes e equipamentos.</p><div class="channel-pills"><span>Chat</span><span>Voz</span><span>Chamados</span></div><p class="contact-guidance">Ao iniciar o contato, tenha uma descrição breve do problema para agilizar a triagem.</p></div>
+      </div>
+    </section>
+
+    <section class="section company-strip" id="empresa"><div class="container company-inner"><div><span class="section-label">VERTEXONE TECHNOLOGIES</span><h2>Conectando pessoas, operações e soluções.</h2><p>Tecnologia com foco em continuidade, eficiência e experiência de atendimento.</p></div><a class="btn btn-ghost" href="#atendimento">Entrar em contato <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer" id="contato"><div class="container footer-content"><div class="footer-about"><img src="assets/vertexone-logo.webp" alt="VertexOne Technologies" width="240" height="80"><p>Soluções corporativas e atendimento digital em uma única experiência.</p></div><div><h3>Serviços</h3><a href="#servicos">Infraestrutura</a><a href="#servicos">Redes</a><a href="#suporte">Suporte técnico</a></div><div><h3>Ajuda</h3><a href="#atendimento">Abrir chamado</a><a href="#conhecimento">Base de conhecimento</a><a href="#atendimento">Canais de atendimento</a></div><div><h3>VertexOne</h3><a href="#empresa">Sobre a empresa</a><a href="#contato">Contato</a><a href="#topo">Voltar ao topo</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> VertexOne Technologies</span><span>Segurança • Confiabilidade • Atendimento</span></div></footer>
+  <script src="script.js" defer></script>
+  <!-- Integração: inserir aqui o snippet oficial do Amazon Connect após concluir Domain & security. Nunca inserir uma chave de assinatura JWT no repositório. -->
+</body>
+</html>
