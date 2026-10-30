@@ -130,6 +130,33 @@
       closeChat: { color: '#ffffff', backgroundColor: '#123456' }
     });
     amazon_connect('snippetId', 'QVFJREFIaDRobWZ4TDRrQys5SXJsU0RsT2NjaHpDOEQvN3ZqSEZkQWdhY1I3SUhoUXdHblh6ZXN2MEZRdUduWE82Ynd0TDFhQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNdzJkSmlJd1g4ZUl4aWRkR0FnRVFnQ3VxWXNoVjB2eUt0cGxiZm1tQlVCZGJ6R09KN1NzeVRrUmtER0hINUR2aWpZTFNJT2NVV0phcERJN086OmlLYjlDM1F4Vnp2bVZOWkZ5Qlk4RENkc1RZUFMzcUdRRmNRM2cxaUtIanJxSG1FSUxPUTU5QWd1c0lRK3ZiU1pTZENCSnFVYVJ3RmF0ZjRtSlQrREFNekdhWE51b3hwNHE2VGFRTVZuUExKek9NME11bkNIS0VYcjUwakxtb2ZkRG13bk1Kb2lra1VzOGJPczdjMDlWQ0NTNVZpdG9QYz0=');
+    // Dimensões e fontes oficiais do widget Amazon Connect.
+    // Mantém o chat legível e os botões de chat/voz dentro do rodapé.
+    amazon_connect('customStyles', {
+      global: {
+        frameWidth: '400px',
+        frameHeight: '600px',
+        fontSize: '14px',
+        footerHeight: '95px',
+        headerHeight: '55px'
+      },
+      transcript: {
+        messageFontSize: '13px'
+      },
+      composer: {
+        fontSize: '13px'
+      },
+      footer: {
+        buttonFontSize: '12px'
+      },
+      fullscreenMode: true
+    });
+    amazon_connect('customDisplayNames', {
+      footer: {
+        endChatButtonText: 'Encerrar',
+        startCallButtonText: 'Ligar agora'
+      }
+    });
     amazon_connect('supportedMessagingContentTypes', [
       'text/plain',
       'text/markdown',
