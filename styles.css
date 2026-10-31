@@ -14,3 +14,30 @@
 @media(max-width:760px){html{scroll-padding-top:75px}.container{width:min(var(--max),calc(100% - 30px))}.site-header{position:sticky}.header-main{min-height:68px}.brand img{height:55px;width:190px}.desktop-nav{display:none}.menu-toggle{display:block;margin-left:auto;background:#e5edf5;border:1px solid #ccd9e7;border-radius:8px;width:40px;height:40px;padding:9px}.menu-toggle span{display:block;height:2px;background:#224563;margin:5px auto;width:19px}.mobile-nav:not([hidden]){display:flex;flex-direction:column;background:#f9fbfe;padding:10px 16px 20px;border-top:1px solid #d9e2ed}.mobile-nav a{padding:9px 14px;font-size:14px;color:#31516e}.hero,.hero-inner{min-height:570px}.hero-inner{padding:60px 0 155px}.hero h1{font-size:clamp(35px,8.7vw,53px)}.hero-content>p{font-size:15px;line-height:1.7}.search-wrap{margin-top:-28px;padding:20px}.search-form{grid-template-columns:1fr}.search-form button{min-height:45px}.search-feedback{position:static;grid-column:1}.section,.section-short{padding:62px 0}.solutions-grid{grid-template-columns:1fr}.solution-card{min-height:330px}.knowledge-grid,.contact-grid{grid-template-columns:1fr;gap:28px}.faq-list summary{font-size:13px}.company-inner{display:block}.company-inner .btn{margin-top:20px}.footer-content{grid-template-columns:repeat(2,1fr)}.footer-bottom{flex-direction:column}.section-heading p{max-width:600px}}
 @media(max-width:500px){.hero,.hero-inner{min-height:640px}.hero-slide{background-position:65% center}.hero-wash{background:linear-gradient(90deg,#0d1725cc,#101d2d8c),linear-gradient(0deg,#0a1728a8,transparent)}.hero h1{font-size:37px}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{justify-content:space-between}.services-grid{grid-template-columns:1fr}.service-card{min-height:230px}.search-intro{align-items:flex-start}.search-icon{width:45px;height:45px}.search-intro h2{font-size:17px}.footer-content{gap:28px}.contact-panel{padding:22px}.company-inner h2{font-size:27px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-slide{transition:none;transform:none!important}.btn,.service-card,.solution-card img{transition:none}}
+
+/* Amazon Connect: moldura arredondada sem alterar o conteúdo do iframe da AWS. */
+#amazon-connect-widget-frame.show {
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  box-shadow: 0 18px 48px rgba(3, 14, 29, .35);
+}
+
+/* Algumas versões do widget renderizam um iframe dentro da moldura. */
+#amazon-connect-widget-frame.show iframe {
+  display: block;
+  border-radius: inherit;
+}
+
+#amazon-connect-open-widget-button,
+#amazon-connect-close-widget-button {
+  border-radius: 999px !important;
+  box-shadow: 0 8px 24px rgba(3, 14, 29, .24);
+}
+
+/* O modo tela cheia em celulares não deve cortar a interface. */
+@media (max-width: 600px) {
+  #amazon-connect-widget-frame.show,
+  #amazon-connect-widget-frame.show iframe {
+    border-radius: 0 !important;
+  }
+}
