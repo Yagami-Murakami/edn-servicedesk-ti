@@ -151,9 +151,16 @@
       },
       fullscreenMode: true
     });
+    // Rótulos do widget em português. Mensagens faladas vêm dos fluxos da AWS.
     amazon_connect('customDisplayNames', {
+      transcript: {
+        systemMessageDisplayName: 'Sistema',
+        botMessageDisplayName: 'Assistente Virtual'
+      },
       footer: {
+        textInputPlaceholder: 'Digite sua mensagem aqui...',
         endChatButtonText: 'Encerrar',
+        closeChatButtonText: 'Fechar',
         startCallButtonText: 'Ligar agora'
       }
     });
