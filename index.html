@@ -130,12 +130,23 @@
       closeChat: { color: '#ffffff', backgroundColor: '#123456' }
     });
     amazon_connect('snippetId', 'QVFJREFIaDRobWZ4TDRrQys5SXJsU0RsT2NjaHpDOEQvN3ZqSEZkQWdhY1I3SUhoUXdHblh6ZXN2MEZRdUduWE82Ynd0TDFhQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNdzJkSmlJd1g4ZUl4aWRkR0FnRVFnQ3VxWXNoVjB2eUt0cGxiZm1tQlVCZGJ6R09KN1NzeVRrUmtER0hINUR2aWpZTFNJT2NVV0phcERJN086OmlLYjlDM1F4Vnp2bVZOWkZ5Qlk4RENkc1RZUFMzcUdRRmNRM2cxaUtIanJxSG1FSUxPUTU5QWd1c0lRK3ZiU1pTZENCSnFVYVJ3RmF0ZjRtSlQrREFNekdhWE51b3hwNHE2VGFRTVZuUExKek9NME11bkNIS0VYcjUwakxtb2ZkRG13bk1Kb2lra1VzOGJPczdjMDlWQ0NTNVZpdG9QYz0=');
-    // Dimensões e fontes oficiais do widget Amazon Connect.
-    // Mantém o chat legível e os botões de chat/voz dentro do rodapé.
+    // No celular, a tela cheia do widget pode cobrir a página e ocultar a conversa.
+    // Dimensiona a janela pelo espaço visível, preservando chat e ligação WebRTC.
+    var isSmallScreen = window.matchMedia('(max-width: 600px)').matches;
+    var viewWidth = window.visualViewport ? window.visualViewport.width : window.innerWidth;
+    var viewHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    var chatWidth = isSmallScreen
+      ? Math.max(300, Math.min(400, Math.floor(viewWidth - 20))) + 'px'
+      : '400px';
+    var chatHeight = isSmallScreen
+      ? Math.max(480, Math.min(600, Math.floor(viewHeight - 80))) + 'px'
+      : '600px';
+
+    // Estilos oficiais do Amazon Connect, adaptados ao tamanho da tela.
     amazon_connect('customStyles', {
       global: {
-        frameWidth: '400px',
-        frameHeight: '600px',
+        frameWidth: chatWidth,
+        frameHeight: chatHeight,
         fontSize: '14px',
         footerHeight: '95px',
         headerHeight: '55px'
@@ -149,7 +160,7 @@
       footer: {
         buttonFontSize: '12px'
       },
-      fullscreenMode: true
+      fullscreenMode: false
     });
     // Rótulos do widget em português. Mensagens faladas vêm dos fluxos da AWS.
     amazon_connect('customDisplayNames', {
